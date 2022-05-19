@@ -1,0 +1,185 @@
+package Shape;
+
+public class Shap {
+    protected String color ="red";
+    protected boolean filled =true;
+
+    public  void Shape()
+    {
+
+    }
+    public void Shape (String color , boolean filled ){
+
+    }
+
+    public String getColor() {
+        return color;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
+
+    public boolean isFilled() {
+        return filled;
+    }
+     public double getArea(){
+
+         return getArea();
+     }
+    public double getPerimeters() {
+
+        return getPerimeters();
+
+    }
+
+
+    @Override
+    public String toString() {
+        return "Shap{" +
+                "color='" + color + '\'' +
+                ", filled=" + filled +
+                '}';
+    }
+}
+---------
+
+
+package Shape;
+
+import java.util.Date;
+public class Circle extends Shap {
+
+
+        protected double radius;
+
+        public void Circle() {
+
+        }
+
+        public Circle(double radius) {
+            this.radius = radius;
+
+        }
+
+        public Circle(double radius, String color, boolean filled) {
+
+        }
+
+        public double getRadius() {
+            return radius;
+        }
+
+        public void setRadius(double radius) {
+            this.radius = radius;
+        }
+
+        public double getArea() {
+
+            return getArea();
+        }
+
+        public double getPerimeters() {
+
+            return getPerimeters();
+
+        }
+
+        @Override
+        public String toString() {
+            return "Circle{" +
+                    "radius=" + radius +
+                    '}';
+        }
+    }
+-----
+
+package Shape;
+
+public class Rectangle  extends Shap {
+    protected double width = 1.0;
+    protected double length = 1.0;
+
+    public void Rectangle() {
+
+    }
+
+    public Rectangle(double width, double length) {
+
+    }
+
+    public Rectangle(double width, double length, String color, boolean filled) {
+
+
+    }
+
+    public double getWidth() {
+        return width;
+    }
+
+    public void setWidth(double width) {
+        this.width = width;
+    }
+
+    public double getLength() {
+        return length;
+    }
+
+    public double getArea(){
+
+        return getArea();
+    }
+    public double getPerimeters() {
+
+        return getPerimeters();
+
+    }
+
+    @Override
+    public String toString() {
+        return "Rectangle{" +
+                "width=" + width +
+                ", length=" + length +
+
+                '}';
+    }
+
+    public void setLength(double length) {
+        this.length = length;
+    }
+}
+----------------------
+package Shape;
+
+public class Square extends Shap {
+    public void Square(){
+
+    }
+    public Square (double side){
+
+    }
+    public Square (double side ,String Color , boolean filled){
+
+    }
+    public double getSids() {
+
+        return getSids();
+    }
+
+    public void setSide(double side) {
+
+    }
+    public void setWidth(double side)
+    {
+
+    }
+    public void setLength(double side)
+    {
+
+    }
+    @Override
+    public String toString() {
+        return "Square{}";
+    }
+}
+
