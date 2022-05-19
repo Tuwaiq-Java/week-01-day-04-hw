@@ -1,0 +1,50 @@
+package pootcamp.coom;
+
+public interface Movable {
+    public void moveUp();
+    public void moveDown();
+    public void moveLeft();
+    public void moveRight();
+
+}
+---------------------
+package pootcamp.coom;
+
+class MovablePoint  implements Movable {
+
+
+    public string MovablePoint (int x, int y , int xSpeed ,int ySpeed)
+    {
+
+    }
+
+    @Override
+    public String toString() {
+        return "(y,x) speed =(x,y){}";
+    }
+
+    public void moveUp() {
+    }
+
+
+    public void moveDown() {
+
+    }
+
+
+    public void moveLeft() {
+
+    }
+
+
+     public void moveRight(){
+
+    }
+
+
+
+    }
+
+
+
+}

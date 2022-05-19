@@ -1,0 +1,82 @@
+home work 4
+
+ex 1
+super class//
+package inh.com;
+public abstract class animal
+{
+    String name;
+
+    public String Animal(String name)
+        {
+            this.name=name;
+            return name;
+        }
+    abstract  void greets();
+
+    }
+-----
+
+package inh.com;
+//sup
+class Cat extends animal
+{
+    public    Cat (String name)
+    {
+        super();
+        this.name =name;
+    }
+
+     void greets()
+    {
+
+        System.out.println("MEWO");
+
+    }
+
+
+}
+
+--------
+package inh.com;
+sup//
+abstract class Dog extends animal
+{
+public void Dog (String name ){
+
+
+}
+@Override
+public void greets() {
+    System.out.println("woof");
+
+}
+    public void greets(Dog another) {
+    System.out.println("woooof");
+
+}
+
+---------
+
+sup sup ///
+package inh.com;
+abstract class BigDog extends Dog {
+    public void BigDog(String name) {
+
+
+    }
+
+    @Override
+    public void greets() {
+        System.out.println("wooow");
+
+    }
+
+    public void greets(Dog another) {
+        System.out.println("woooof");
+
+    }
+
+
+
+------------
