@@ -1,0 +1,310 @@
+
+package javaapplication2;
+
+
+
+    public abstract class Animal {
+
+    private String name;
+
+    public Animal(String name) {
+        this.name = name;
+    }
+
+    public abstract void greets();
+
+}
+
+
+
+    public class BigDog extends Dog{
+
+    public BigDog(String name) {
+        super(name);
+    }
+
+    public void greets() {
+        System.out.println("Wooow");
+    }
+
+    public void greets(Dog another) {
+
+        System.out.println("Wooooooooooow");
+    }
+
+    public void greets(BigDog another) {
+
+        System.out.println("Wooooooooooooooooow");
+    }
+}
+
+
+
+
+
+    public class Cat extends Animal{
+
+
+    public Cat(String name) {
+        super(name);
+    }
+
+    @Override
+    public void greets() {
+
+    }
+}
+
+
+
+    public class Circle  extends Shape{
+
+    protected double radius =1.0;
+
+    public Circle(String color, Boolean filled, double radius) {
+        super(color, filled);
+        this.radius = radius;
+    }
+
+    public Circle(double radius) {
+        this.radius = radius;
+    }
+
+    public Circle() {
+    }
+
+    @Override
+    public double getArea() {
+        return 0;
+    }
+
+    @Override
+    public double perimeter() {
+        return 0;
+    }
+
+    public double getRadius() {
+        return radius;
+    }
+
+    public void setRadius(double radius) {
+        this.radius = radius;
+    }
+
+    @Override
+    public String toString() {
+        return "Circle{" +"radius " + radius +" color " + color +" filled " + filled };
+    }
+
+
+
+
+
+
+    public class Dog extends Animal{
+
+    public Dog(String name) {
+        super(name);
+    }
+
+    @Override
+    public void greets() {
+        System.out.println("Wooof");
+    }
+
+    public void greets(Dog another) {
+
+        System.out.println("Wooooooooooooof");
+    }
+}
+
+
+
+
+    public interface Movable {
+
+    public void moveUp();
+    public void moveDown();
+    public void moveLeft();
+    public void moveRight();
+}
+
+
+
+
+
+
+     public class MovablePoint implements Movable{
+
+     int x;
+     int y;
+     int xSpeed;
+     int ySpeed;
+
+    public MovablePoint(int x, int y, int xSpeed, int ySpeed) {
+        this.x = x;
+        this.y = y;
+        this.xSpeed = xSpeed;
+        this.ySpeed = ySpeed;
+    }
+
+    @Override
+    public void moveUp() {
+        this.y-=ySpeed;
+    }
+
+    @Override
+    public void moveDown() {
+        this.y+=ySpeed;
+
+    }
+
+    @Override
+    public void moveLeft() {
+        this.x-=xSpeed;
+    }
+
+    @Override
+    public void moveRight() {
+        this.x+=xSpeed;
+    }
+
+    @Override
+    public String toString() {
+        return "MovablePoint{"x " + x + " y " + y +" xSpeed " + xSpeed +" ySpeed " + ySpeed + };
+    }
+}
+
+
+
+
+    public class Rectangle extends Shape{
+    protected double width=1.0;
+    protected double length=1.0;
+
+    public Rectangle(String color, Boolean filled, double width, double length) {
+        super(color, filled);
+        this.width = width;
+        this.length = length;
+    }
+
+    public Rectangle(double width, double length) {
+        this.width = width;
+        this.length = length;
+    }
+
+    public Rectangle() {
+    }
+
+    @Override
+    public double getArea() {
+        return 0;
+    }
+
+    @Override
+    public double perimeter() {
+        return 0;
+    }
+
+    public double getWidth() {
+        return width;
+    }
+
+    public void setWidth(double width) {
+        this.width = width;
+    }
+
+    public double getLength() {
+        return length;
+    }
+
+    public void setLength(double length) {
+        this.length = length;
+    }
+
+    @Override
+    public String toString() {
+        return "Rectangle{"width " + width + " length "+ length + " color " + color +  " filled " + filled };
+    }
+}
+
+
+
+
+
+    public abstract class Shape {
+
+    protected String color = "red";
+    protected Boolean filled=true;
+
+    public Shape(String color, Boolean filled) {
+        this.color = color;
+        this.filled = filled;
+    }
+
+    public Shape() {
+    }
+
+    public String getColor() {
+        return color;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
+
+    public Boolean getFilled() {
+        return filled;
+    }
+
+    public void setFilled(Boolean filled) {
+        this.filled = filled;
+    }
+
+    public abstract double getArea();
+    public abstract double perimeter();
+
+    @Override
+    public String toString() {
+        return "Shape{" + " color " + color  +" filled" + filled };
+    }
+
+
+
+
+    public class Square extends Rectangle{
+
+    public Square(String color, Boolean filled, double width, double length) {
+        super(color, filled, width, length);
+    }
+
+    public Square(double width, double length) {
+        super(width, length);
+    }
+
+    public Square() {
+    }
+
+    public void setLength(double length) {
+        this.length = length;
+    }
+
+    public void setWidth(double width) {
+        this.width = width;
+    }
+
+    public void setASide(double side) {
+     super.setWidth(side);
+        super.setLength(side);
+    }
+
+    public double getASide() {
+        return super.getWidth();
+    }
+}
+
+
+    
+    
+   
+
